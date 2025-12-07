@@ -35,19 +35,47 @@ export default function EventJourney() {
                 Event Journey
             </h2>
 
-            {/* Timeline Container */}
-            <div className="relative w-full max-w-7xl mx-auto px-4 h-[550px] md:h-[500px] z-10">
+            {/* MOBILE: Vertical Timeline */}
+            <div className="md:hidden relative w-full max-w-md mx-auto px-4 z-10 flex flex-col gap-6 pb-20">
+                {/* Vertical Line - positioned absolutely from container */}
+                <div className="absolute left-[36px] top-0 bottom-0 w-[3px] bg-[#d97757] -translate-x-1/2" />
+
+                {events.map((event, index) => (
+                    <div key={index} className="relative flex items-start gap-4 ml-2">
+                        {/* Dot - positioned inline with flex */}
+                        <div className="relative flex-shrink-0 w-6 h-6 mt-4">
+                            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[#d97757] rounded-full z-20 ring-4 ring-[#fae8d9]" />
+                        </div>
+
+                        {/* Card */}
+                        <div className="flex-1 bg-[#fae8d9] border border-[#e8c9b3] rounded-2xl p-5 text-left shadow-md">
+                            <h3 className="font-bold text-gray-900 leading-tight text-lg mb-1">
+                                {event.title}
+                            </h3>
+                            <span className="block text-[#d97757] font-bold text-sm mb-2">
+                                {event.time}
+                            </span>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                {event.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* DESKTOP: Horizontal Timeline */}
+            <div className="hidden md:block relative w-full max-w-7xl mx-auto h-[500px] z-10">
 
                 {/* Main Horizontal Line */}
                 <div className="absolute left-0 right-0 top-1/2 h-[3px] bg-[#d97757] -translate-y-1/2 z-10" />
 
                 {/* Train - Larger */}
-                <div className="absolute left-2 md:left-4 top-1/2 -translate-y-[72%] z-20 w-36 h-24 md:w-64 md:h-40">
+                <div className="absolute left-4 top-1/2 -translate-y-[72%] z-20 w-64 h-40">
                     <Image src="/train.png" alt="Train" fill className="object-contain" />
                 </div>
 
                 {/* Timeline Items */}
-                <div className="absolute left-40 md:left-72 right-4 top-0 bottom-0 flex justify-between">
+                <div className="absolute left-72 right-4 top-0 bottom-0 flex justify-between">
                     {events.map((event, index) => {
                         const isAbove = index % 2 === 0;
 
@@ -69,20 +97,20 @@ export default function EventJourney() {
 
                                 {/* Card - Larger */}
                                 <div
-                                    className="absolute left-1/2 -translate-x-1/2 w-40 md:w-48 z-10"
+                                    className="absolute left-1/2 -translate-x-1/2 w-48 z-10"
                                     style={{
                                         top: isAbove ? 'auto' : 'calc(50% + 90px)',
                                         bottom: isAbove ? 'calc(50% + 90px)' : 'auto',
                                     }}
                                 >
-                                    <div className="bg-[#fae8d9] border border-[#e8c9b3] rounded-2xl p-4 md:p-5 text-center shadow-sm hover:scale-105 transition-transform duration-300">
-                                        <h3 className="font-bold text-gray-900 leading-tight text-sm md:text-base mb-1">
+                                    <div className="bg-[#fae8d9] border border-[#e8c9b3] rounded-2xl p-5 text-center shadow-sm hover:scale-105 transition-transform duration-300">
+                                        <h3 className="font-bold text-gray-900 leading-tight text-base mb-1">
                                             {event.title}
                                         </h3>
-                                        <span className="block text-[#d97757] font-bold text-xs md:text-sm mb-1">
+                                        <span className="block text-[#d97757] font-bold text-sm mb-1">
                                             {event.time}
                                         </span>
-                                        <p className="text-gray-600 text-[9px] md:text-xs leading-relaxed">
+                                        <p className="text-gray-600 text-xs leading-relaxed">
                                             {event.description}
                                         </p>
                                     </div>

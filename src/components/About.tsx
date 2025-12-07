@@ -35,17 +35,17 @@ export default function About() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                             {/* Feature 1: UsersRound */}
-                            <div className="bg-white/30 rounded-2xl p-10 flex items-center justify-center aspect-square border border-gray-400/20 shadow-sm hover:scale-105 transition-transform">
+                            <div className="bg-white/30 rounded-2xl p-10 flex items-center justify-center md:aspect-square border border-gray-400/20 shadow-sm hover:scale-105 transition-transform">
                                 <UsersRound className="w-24 h-24 text-blue-500 fill-blue-200/50" strokeWidth={1.5} />
                             </div>
 
                             {/* Feature 2: Shield */}
-                            <div className="bg-white/30 rounded-2xl p-10 flex items-center justify-center aspect-square border border-gray-400/20 shadow-sm hover:scale-105 transition-transform">
+                            <div className="bg-white/30 rounded-2xl p-10 flex items-center justify-center md:aspect-square border border-gray-400/20 shadow-sm hover:scale-105 transition-transform">
                                 <Shield className="w-24 h-24 text-green-500 fill-green-200/50" strokeWidth={1.5} />
                             </div>
 
                             {/* Feature 3: Lightbulb */}
-                            <div className="bg-white/30 rounded-2xl p-10 flex items-center justify-center aspect-square border border-gray-400/20 shadow-sm hover:scale-105 transition-transform">
+                            <div className="bg-white/30 rounded-2xl p-10 flex items-center justify-center md:aspect-square border border-gray-400/20 shadow-sm hover:scale-105 transition-transform">
                                 <Lightbulb className="w-24 h-24 text-sky-400 fill-yellow-200/80" strokeWidth={1.5} />
                             </div>
                         </div>

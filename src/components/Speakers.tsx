@@ -22,7 +22,7 @@ export default function Speakers() {
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1a6b7c] to-transparent z-[5]" />
 
             {/* Main Container */}
-            <div className="relative z-10 w-full px-16">
+            <div className="relative z-10 w-full px-4 md:px-16">
 
                 {/* Large Glassmorphism Box */}
                 <div className="bg-[#DEDEDE]/20 backdrop-blur-xs border border-black/50 rounded-xl p-8 md:p-16 flex flex-col items-center gap-8 md:gap-12 relative overflow-hidden">

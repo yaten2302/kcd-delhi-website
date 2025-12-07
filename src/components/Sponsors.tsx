@@ -7,7 +7,7 @@ export default function Sponsors() {
             <div className="absolute inset-0 bg-white/5 pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-8 relative z-10 w-full max-w-5xl">
-                <div className="bg-white/25 backdrop-blur-md border border-white/30 rounded-[2rem] p-10 md:p-20 text-center shadow-2xl">
+                <div className="bg-white/25 backdrop-blur-md border border-white/30 rounded-xl p-6 md:p-20 text-center shadow-2xl">
 
                     <h2 className="text-4xl md:text-6xl font-extrabold text-[#0f172a] mb-8 tracking-tight">
                         Sponsors

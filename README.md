@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KCD Delhi 2026 Website
 
-## Getting Started
+The official website for **Kubernetes Community Days (KCD) New Delhi 2026**.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16
+- **Styling**: Tailwind CSS 4
+- **Language**: TypeScript
+- **Fonts**: Outfit (Google Fonts)
+
+## 🎨 Design
+
+The design for this website is available on Figma:
+
+**[View Figma Design](https://www.figma.com/design/XJTUHA2wArdDg5Gb2DuYzP/kcd-delhi?node-id=1-2&t=BYq92Bi6KZS3d8jX-0)**
+
+## 📦 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx          # Main landing page
+│   ├── layout.tsx        # Root layout with fonts
+│   └── globals.css       # Global styles
+└── components/
+    ├── Navbar.tsx        # Navigation bar
+    ├── Hero.tsx          # Hero section with countdown
+    ├── About.tsx         # About the event
+    ├── EventJourney.tsx  # Event timeline/agenda
+    ├── Speakers.tsx      # Call for speakers
+    ├── Venue.tsx         # Venue info & FAQ
+    ├── Team.tsx          # Organisers & Volunteers
+    ├── Sponsors.tsx      # Sponsorship CTA
+    └── Footer.tsx        # Footer with links
+```
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - © 2025 KCD New Delhi
