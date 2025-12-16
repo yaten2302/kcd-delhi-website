@@ -150,7 +150,7 @@ export default function SponsorshipPage() {
                                 <p className="text-gray-200 text-sm mb-2">
                                     <strong>For inquiries, contact: </strong>
                                 </p>
-                                <p className="text-gray-300 text-sm">
+                                <p className="text-white-300 text-sm">
                                     Email: contact@kcddelhi.com <br/>
                                     Website: kcddelhi.com
                                 </p>
