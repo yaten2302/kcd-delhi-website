@@ -1,5 +1,15 @@
 import Image from "next/image";
 
+/* TODO: fix the about section background.
+
+Currently, the design at the top is getting disrupted, since it's getting
+overlapped by the hero section background.
+
+We need to move the about section background img a little down, so that the design
+looks proper.
+
+*/
+
 export default function About() {
   return (
     <section
@@ -28,8 +38,8 @@ export default function About() {
               Delhi, that brings together adopters and technologists from the
               open source and cloud native ecosystem for a full day of learning,
               collaboration, and meaningful networking. With 700+ attendees
-              expected, it stands as one of India’s most vibrant cloud native
-              gatherings.
+              expected, it stands as one of India&apos;s most vibrant cloud
+              native gatherings.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
