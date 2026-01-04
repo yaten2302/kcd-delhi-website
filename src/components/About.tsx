@@ -1,15 +1,5 @@
 import Image from "next/image";
 
-/* TODO: fix the about section background.
-
-Currently, the design at the top is getting disrupted, since it's getting
-overlapped by the hero section background.
-
-We need to move the about section background img a little down, so that the design
-looks proper.
-
-*/
-
 export default function About() {
   return (
     <section
@@ -19,9 +9,8 @@ export default function About() {
       <div className="absolute inset-0 -z-20">
         <Image
           src="/about-section.png"
-          alt=""
+          alt="About section background"
           fill
-          className="object-cover object-center"
           quality={100}
         />
       </div>

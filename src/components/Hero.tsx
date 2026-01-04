@@ -51,7 +51,6 @@ export default function Hero() {
           src="/hero-section.png"
           alt=""
           fill
-          className="object-cover object-bottom"
           priority
           quality={100}
         />
