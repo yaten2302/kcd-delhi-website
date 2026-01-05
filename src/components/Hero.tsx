@@ -69,13 +69,21 @@ export default function Hero() {
 
       <div className="container mx-auto px-6 md:px-12 pt-20 z-10">
         <div className="flex flex-col items-start gap-8 max-w-4xl">
-          <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight drop-shadow-lg">
-            KCD
-            <br />
-            Delhi
-            <br />
-            2026
-          </h1>
+          <div className="flex flex-col items-start">
+            {/* Mobile-only single line */}
+            <h1 className="md:hidden text-white text-4xl font-bold leading-tight drop-shadow-lg whitespace-nowrap">
+              KCD Delhi 2026
+            </h1>
+
+            {/* Desktop original - unchanged */}
+            <h1 className="hidden md:block text-white text-6xl md:text-8xl font-bold leading-tight drop-shadow-lg">
+              KCD
+              <br />
+              Delhi
+              <br />
+              2026
+            </h1>
+          </div>
 
           {/* Countdown - Single Frame */}
           <div className="flex gap-3 md:gap-6 w-full max-w-lg border-2 border-white/30 rounded-3xl p-4 md:p-6">
