@@ -5,7 +5,7 @@ export default function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative w-full py-24 bg-gradient-to-b from-[#172B4C] to-[#9FBAC3] min-h-[60vh] flex items-center justify-center overflow-hidden"
+      className="relative w-full py-24 bg-linear-to-b from-[#172B4C] to-[#9FBAC3] min-h-[60vh] flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 bg-white/5 pointer-events-none" />
 
@@ -31,6 +31,46 @@ export default function Sponsors() {
                 href="https://kodekloud.com/"
                 src="/KodeKloud.svg"
                 alt="KodeKloud Logo"
+                width={220}
+                height={220}
+              />
+            </div>
+
+            <div className="flex items-center justify-center bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <ImageBtn
+                href="https://www.vultr.com/"
+                src="/vultr_logo.png"
+                alt="Vultr Logo"
+                width={220}
+                height={220}
+              />
+            </div>
+
+            <div className="flex items-center justify-center bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <ImageBtn
+                href="https://www.docker.com/"
+                src="/docker-logo.png"
+                alt="Docker Logo"
+                width={220}
+                height={220}
+              />
+            </div>
+
+            <div className="flex items-center justify-center bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <ImageBtn
+                href="https://www.elastic.co/"
+                src="/elastic-logo.png"
+                alt="Elastic Logo"
+                width={220}
+                height={220}
+              />
+            </div>
+
+            <div className="flex items-center justify-center bg-white/40 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <ImageBtn
+                href="https://nudgebee.com/"
+                src="/nudgebee-logo.svg"
+                alt="NudgeBee Logo"
                 width={220}
                 height={220}
               />
