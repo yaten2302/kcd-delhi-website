@@ -2,17 +2,28 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import RegistrationModal from "./RegistrationModal";
 
 // Event date: Feb 21, 2026 (UTC)
 const TARGET_DATE = new Date("2026-02-21T00:00:00Z");
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
     hours: "00",
     minutes: "00",
     seconds: "00",
   });
+
+  const handleRegisterClick = () => {
+    // On mobile, open in new tab; on desktop, open modal
+    if (window.innerWidth < 768) {
+      window.open("https://konfhub.com/kcd-delhi-2026", "_blank");
+    } else {
+      setIsModalOpen(true);
+    }
+  };
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -105,14 +116,12 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
-            <a
-              href="https://konfhub.com/kcd-delhi-2026"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0f172a] text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-[#0f172a]/90 transition-colors shadow-lg w-full sm:w-auto text-center inline-block"
+            <button
+              onClick={handleRegisterClick}
+              className="bg-[#0f172a] text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-[#0f172a]/90 transition-colors shadow-lg w-full sm:w-auto text-center"
             >
               Register Now
-            </a>
+            </button>
 
             <a
               href="https://sessionize.com/kcd-new-delhi/"
@@ -125,6 +134,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <RegistrationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }
